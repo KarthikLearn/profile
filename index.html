@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karthik Parthasarathy | Senior Java Full Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --accent:#00bfff;
+  --bg1:#020617;
+  --bg2:#0a192f;
+  --text:#e6eef8;
+  --muted:#aab3c9;
+}
+*{box-sizing:border-box;scroll-behavior:smooth;}
+body {
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  color:var(--text);
+  background:
+    linear-gradient(rgba(0,0,20,0.8),rgba(0,0,30,0.85)),
+    url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80")
+    no-repeat center center fixed;
+  background-size:cover;
+  background-attachment:fixed;
+}
+header {
+  text-align:center;
+  padding:100px 20px 60px;
+}
+header img {
+  width:170px;height:170px;border-radius:50%;
+  border:3px solid rgba(255,255,255,0.25);
+  box-shadow:0 0 25px rgba(0,191,255,0.4);
+}
+header h1 {font-size:2.5rem;color:var(--accent);margin:20px 0 10px;}
+header p {max-width:700px;margin:auto;color:var(--muted);font-size:1.1rem;line-height:1.6;}
+nav {
+  position:sticky;top:0;z-index:10;
+  background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);
+  display:flex;justify-content:center;gap:30px;padding:16px;
+}
+nav a {
+  color:#fff;text-decoration:none;font-weight:600;transition:.3s;
+}
+nav a:hover {color:var(--accent);}
+section {
+  max-width:1000px;margin:80px auto;padding:30px;
+  background:rgba(255,255,255,0.05);border-radius:10px;
+  backdrop-filter:blur(6px);box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+h2 {
+  text-align:center;color:var(--accent);margin-bottom:40px;font-size:1.9rem;
+}
+.exp-card,.proj-card {
+  background:rgba(255,255,255,0.05);
+  border-radius:10px;padding:20px;margin:16px 0;
+  display:flex;gap:20px;align-items:center;
+  transition:transform .3s, box-shadow .3s;
+}
+.exp-card:hover,.proj-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 8px 18px rgba(0,191,255,0.15);
+}
+.exp-card img,.proj-card img {width:80px;height:50px;object-fit:contain;}
+.skill-grid {
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;
+}
+.skill-card {
+  background:rgba(255,255,255,0.05);
+  padding:20px;border-radius:8px;text-align:center;
+  transition:transform .3s;
+}
+.skill-card:hover {transform:translateY(-3px);}
+.skill-card h4 {color:var(--accent);margin-bottom:10px;}
+.cert-list {
+  list-style:none;padding:0;text-align:center;line-height:1.8;
+}
+.cert-list li a {
+  color:var(--accent);text-decoration:none;
+}
+.cert-list li a:hover {text-decoration:underline;}
+#contact {
+  background: linear-gradient(145deg, rgba(10,20,50,0.9), rgba(5,10,25,0.95));
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(0,191,255,0.15), inset 0 0 20px rgba(61,211,255,0.1);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 30px;
+}
+
+#contact h2 {
+  color: var(--accent);
+  text-shadow: 0 0 12px rgba(61,211,255,0.4);
+  margin-bottom: 30px;
+}
+
+#contact .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+#contact .contact p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+#contact .contact i {
+  color: var(--accent);
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+#contact .contact a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contact .contact a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+#contact .btn {
+  background: var(--accent);
+  color: #021226;
+  font-weight: 700;
+  margin-top: 25px;
+  padding: 14px 28px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0,191,255,0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+#contact .btn:hover {
+  background: #00a5d9;
+  box-shadow: 0 0 25px rgba(0,191,255,0.6);
+  transform: translateY(-2px);
+}
+
+
+.btn {
+  display:inline-block;
+  background:var(--accent);
+  color:#021226;
+  padding:14px 28px;
+  border-radius:6px;
+  font-weight:700;
+  text-decoration:none;
+  margin-top:20px;
+  box-shadow:0 0 12px rgba(0,191,255,0.4);
+  transition:background .3s, box-shadow .3s;
+}
+.btn:hover {background:#00a5d9;box-shadow:0 0 20px rgba(0,191,255,0.6);}
+footer {
+  text-align:center;padding:25px;
+  color:var(--muted);
+  background:rgba(0,0,0,0.7);
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+@media(max-width:700px){
+  .exp-card,.proj-card{flex-direction:column;text-align:center;}
+  .exp-card img,.proj-card img{margin-bottom:10px;}
+}
+.proj-card {
+  opacity:0;transform:translateY(30px);transition:all 0.8s ease;
+}
+.proj-card.visible {
+  opacity:1;transform:translateY(0);
+}
+#about p {
+  line-height:1.8;margin-bottom:20px;color:#cfd7e6;font-size:1.05rem;text-align:justify;
+}
+#about {
+  max-width:900px;margin:100px auto;text-align:center;padding:40px 20px;
+  background:linear-gradient(145deg, rgba(10,20,50,0.8), rgba(5,10,25,0.9));
+  border-radius:18px;
+  box-shadow:0 0 40px rgba(0,0,0,0.4), inset 0 0 20px rgba(61,211,255,0.1);
+  backdrop-filter:blur(8px);
+}
+.about-title {
+  font-size:2.6rem;font-weight:800;margin-bottom:30px;
+  color:#3dd3ff;text-shadow:0 0 20px rgba(61,211,255,0.4);
+  letter-spacing:1px;
+}
+#topBtn {
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  z-index:99;
+  background:var(--accent);
+  color:#021226;
+  border:none;
+  padding:14px 18px;
+  border-radius:50%;
+  font-size:18px;
+  cursor:pointer;
+  box-shadow:0 0 15px rgba(0,191,255,0.4);
+  transition:all 0.3s ease;
+}
+#topBtn:hover {
+  background:#00a5d9;
+  box-shadow:0 0 25px rgba(0,191,255,0.6);
+}
+</style>
+</head>
+
+<body>
+<header id="home">
+  <img src="pic/Karthik_Pic1.png" alt="Karthik P">
+  <section id="about">
+    <h1 class="about-title">Karthik Parthasarathy</h1>
+    <p><strong>Senior Java Full Stack Developer</strong> with over <strong>13 years of experience</strong> in designing, developing, and architecting scalable enterprise applications across <strong>Retail, Healthcare, Manufacturing, Gaming, Learning Management, and Telecom</strong> domains.</p>
+    <p>Skilled in <strong>Java, Spring Boot, Microservices, Angular, REST, SOAP, ORM, ELK Stack</strong>, and <strong>Cloud-native architectures (AWS & GCP)</strong>. A <strong>Certified Full Stack Developer</strong> with strong expertise in <strong>solution design, API-first development, CI/CD pipelines, containerization, and performance optimization</strong>.</p>
+    <p>An <strong>Agile and Scrum practitioner</strong>, passionate about <strong>mentoring developers</strong>, influencing <strong>architectural decisions</strong>, and driving <strong>technical strategy, scalability, and cloud migration initiatives</strong> for enterprise-grade systems.</p>
+  </section>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <div class="exp-card"><img src="pic/comcast.png"><div><h3>Comcast India Engineering Center</h3><p><strong>Development Engineer 4</strong> | Mar 2023 – Present</p><p>Leading backend microservices for Sky UK digital commerce using Spring Boot, Kafka, and Docker.</p></div></div>
+  <div class="exp-card"><img src="pic/reno.jpg"><div><h3>Renault Nissan Technology & Business Centre</h3><p><strong>Assistant Manager</strong> | Aug 2021 – Mar 2023</p><p>Developed plant monitoring and workforce tracking systems using Spring Boot & Angular.</p></div></div>
+  <div class="exp-card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"><div><h3>IBM India Pvt. Ltd.</h3><p><strong>Advisory System Analyst</strong> | Dec 2018 – Aug 2021</p><p>Built healthcare microservices for National Healthcare Group, Singapore.</p></div></div>
+  <div class="exp-card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg"><div><h3>Infosys Ltd.</h3><p><strong>Technology Analyst</strong> | Sep 2015 – Nov 2018</p><p>Delivered tax automation for Walmart Brazil with DB2, JPA, and WebSphere.</p></div></div>
+  <div class="exp-card"><img src="pic/redim.png"><div><h3>ReDIM Information Systems Pvt. Ltd.</h3><p><strong>Software Engineer</strong> | Aug 2012 – Aug 2015</p><p>Developed backend logic and gaming modules for HoGaming platform using Java & JSP.</p></div></div>
+</section>
+
+<section id="projects">
+  <h2>Key Projects & Clients</h2>
+  <div class="proj-card"><img src="pic/sky.jpg"><div><h3>Sky e-Commerce Platform – UK</h3><p>Developed event-driven microservices for billing, sales, and fulfillment with Kafka & Spring Cloud.</p></div></div>
+  <div class="proj-card"><img src="pic/reno.jpg"><div><h3>Renault Plant Monitoring Tool – France</h3><p>Created real-time monitoring dashboard for Renault–Nissan plants using Angular & Spring Boot.</p></div></div>
+  <div class="proj-card"><img src="pic/nhg.jpg"><div><h3>National Healthcare Group – Singapore</h3><p>Built microservices for hospital management and outpatient billing systems.</p></div></div>
+  <div class="proj-card"><img src="pic/walmart.png"><div><h3>Walmart Tax Automation – Brazil</h3><p>Automated tax association & compliance alert systems using JPA and DB2.</p></div></div>
+  <div class="proj-card"><img src="pic/sysco.png"><div><h3>Sysco Logistics API Integrations – US</h3><p>Developed secure inventory sync APIs for order and logistics management.</p></div></div>
+  <div class="proj-card"><img src="pic/hogame.jpeg"><div><h3>HoGaming Live Dealer Platform – Macau</h3><p>Implemented real-time backend logic and streaming for online casino games.</p></div></div>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills & Certifications</h2>
+  <div class="skill-grid">
+    <!-- All skill cards retained -->
+    <div class="skill-card"><h4>Languages</h4><p>Java, JavaScript, HTML5, SQL, PL/SQL, C++, JSP, Servlets</p></div>
+    <div class="skill-card"><h4>Frameworks</h4><p>Spring, Spring Boot, Spring Cloud, Hibernate, JPA, JUnit, Cucumber, JBPM, Angular, Angular Material, Bootstrap</p></div>
+    <div class="skill-card"><h4>Web & J2EE Technologies</h4><p>JDBC, JSP, Servlets, REST Web Services, J2EE Application Development</p></div>
+    <div class="skill-card"><h4>Databases</h4><p>Oracle 12c, PostgreSQL, MySQL, DB2, Microsoft SQL Server 2008</p></div>
+    <div class="skill-card"><h4>DevOps / Tools</h4><p>Docker, Kafka, Swagger, Jenkins, Git, Maven, Gradle, SonarQube, Postman, Liquibase</p></div>
+    <div class="skill-card"><h4>Cloud</h4><p>AWS (EC2, S3), GCP (Basic)</p></div>
+    <div class="skill-card"><h4>Version Control</h4><p>Git, SVN, CVS</p></div>
+    <div class="skill-card"><h4>Servers</h4><p>Apache Tomcat, WebSphere Application Server</p></div>
+    <div class="skill-card"><h4>IDEs</h4><p>Eclipse, IntelliJ IDEA, STS, Visual Studio, IBM RSA</p></div>
+    <div class="skill-card"><h4>Design & Modeling</h4><p>High-Level Design, Systems Design, StarUML, Requirements Analysis</p></div>
+    <div class="skill-card"><h4>Methodologies</h4><p>Agile, Scrum, SDLC</p></div>
+    <div class="skill-card"><h4>Other Skills</h4><p>Data Structures, Full-Stack Development, Microservices, JMS, ELK Stack, Leadership</p></div>
+  </div>
+
+  <h3 style="text-align:center; margin-top:50px; color:var(--accent);">Certifications</h3>
+  <ul class="cert-list">
+    <li><i class="fa-brands fa-udemy"></i>
+      <a href="https://www.udemy.com/certificate/UC-df8a5a2c-ebb1-4acf-aed1-3ee8d5392005/" target="_blank">Udemy – Java Full Stack Developer</a></li>
+    <li><i class="fa-solid "></i>
+      <a href="https://verifyawards.stackroute.in/verify?url=https://awards.stackroute.in/public/assertions/uMvHI-dxR5yN3wqosAGIBg.json?v=1_1" target="_blank">StackRoute – Full Stack Certification</a></li>
+    <li><i class="fa-brands fa-udemy"></i>
+      <a href="https://www.udemy.com/certificate/UC-70LXNWHM/" target="_blank">Udemy – Microservices with Spring Boot</a></li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+    <p><i class="fa-solid fa-envelope"></i><a href="mailto:krishkarthik111@gmail.com">krishkarthik111@gmail.com</a></p>
+    <p><i class="fa-solid fa-phone"></i>+91 98436 76695</p>
+    <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/karthikparthasarathy1511/" target="_blank">linkedin.com/in/karthikparthasarathy1511</a></p>
+    <p><i class="fa-brands fa-github"></i><a href="https://github.com/KarthikLearn" target="_blank">github.com/KarthikLearn</a></p>
+    <a href="Resume_Karthik.pdf" class="btn" target="_blank" rel="noopener noreferrer">
+      <i class="fa-solid fa-file-pdf"></i> View Resume
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Karthik Parthasarathy — All Rights Reserved
+</footer>
+
+<button onclick="topFunction()" id="topBtn" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+document.querySelectorAll('.proj-card').forEach(card => observer.observe(card));
+
+const topBtn = document.getElementById("topBtn");
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
